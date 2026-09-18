@@ -1,1 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fall Mum Fundraiser | Cub Scout Pack 68 Farmington</title>
+  <meta name="description" content="Support Cub Scout Pack 68 with fresh 9-inch hardy mums from Mapletree Nursery. Free delivery to Farmington & Unionville, CT." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            scout: {
+              blue: '#003F87',
+              dark: '#002654',
+              gold: '#FCD116',
+              goldHover: '#E5BD0E',
+              cream: '#FAF8F5',
+              border: '#E2DEC9'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-scout-cream text-scout-dark font-sans antialiased selection:bg-scout-gold selection:text-scout-dark">
+
+  <!-- TOP UTILITY BAR -->
+  <div class="bg-scout-dark text-white/90 text-xs py-2 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-scout-gold animate-pulse"></span>
+        <span>Orders Close: <strong>September 30, 2026</strong> • Porch Delivery: <strong>Mid-October</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span>Delivery strictly to <strong>Farmington & Unionville (06032 & 06085)</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & NAV -->
+  <header class="sticky top-0 z-50 bg-scout-blue text-white shadow-lg border-b border-scout-gold/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <div class="flex items-center gap-3.5">
+        <img src="pack68-logo.png" alt="Cub Scout Pack 68 Logo" class="h-14 w-auto drop-shadow-md" />
+        <div class="flex flex-col">
+          <span class="font-heading font-extrabold text-2xl tracking-tight leading-none text-white">PACK 68</span>
+          <span class="text-[11px] font-semibold uppercase tracking-widest text-scout-gold mt-1">Farmington • Connecticut</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+        <a href="#products" class="text-white/90 hover:text-scout-gold transition-colors">Select Colors</a>
+        <a href="#order-form" class="text-white/90 hover:text-scout-gold transition-colors">Checkout</a>
+      </nav>
+
+      <div>
+        <a href="#order-form" class="bg-scout-gold hover:bg-scout-goldHover text-scout-dark font-heading font-bold text-sm px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+          <span>Checkout</span>
+          <span id="nav-badge" class="hidden bg-scout-dark text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden pt-12 pb-16 bg-gradient-to-b from-scout-cream via-white to-scout-cream border-b border-scout-border">
+    <div class="max-w-4xl mx-auto px-4 text-center space-y-5">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-scout-blue text-scout-gold text-xs font-bold uppercase tracking-wider shadow-sm">
+        🌸 2026 Fall Fundraiser • Mapletree Nursery Partnership
+      </div>
+      
+      <h1 class="font-heading text-4xl sm:text-5xl font-extrabold text-scout-blue leading-tight">
+        Lush Fall Mums Delivered Direct to Your Door
+      </h1>
+      
+      <p class="text-base sm:text-lg text-scout-dark/80 max-w-2xl mx-auto leading-relaxed">
+        Support the youth of Cub Scout Pack 68! All proceeds go directly into our Pack General Fund to sponsor outdoor campouts, pinewood derby kits, badges, and youth leadership adventures for local boys and girls.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left max-w-2xl mx-auto">
+        <div class="bg-white p-4 rounded-xl border border-scout-border shadow-sm">
+          <div class="font-heading font-bold text-scout-blue text-base">$15 per Plant</div>
+          <div class="text-xs text-scout-dark/70 mt-1">Sturdy 9" nursery pots across 5 rich autumn colors.</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-scout-border shadow-sm">
+          <div class="font-heading font-bold text-scout-blue text-base">Free Porch Delivery</div>
+          <div class="text-xs text-scout-dark/70 mt-1">Pack 68 families deliver directly in Farmington & Unionville.</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-scout-border shadow-sm">
+          <div class="font-heading font-bold text-scout-blue text-base">Venmo Payment</div>
+          <div class="text-xs text-scout-dark/70 mt-1">Direct and secure to @Pack68FarmCT.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT CARDS -->
+  <section id="products" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <h2 class="font-heading text-3xl font-extrabold text-scout-blue">1. Select Your Mum Colors</h2>
+        <p class="text-sm text-scout-dark/70">Pick your quantities below. Each mum is grown locally by Mapletree Nursery in a 9-inch grower pot.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        
+        <!-- White -->
+        <div class="bg-scout-cream rounded-2xl overflow-hidden border border-scout-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <img src="mum-white.jpg" alt="Crisp White Potted Mum" class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 bg-scout-dark/85 py-1.5 px-2 text-center">
+              <span class="text-[9px] uppercase tracking-wider text-scout-gold font-bold block">Visual Preview Only</span>
+              <span class="text-[8px] text-white/90 block leading-tight">Actual 9" nursery plant may vary</span>
+            </div>
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-between">
+            <div class="mb-3">
+              <h3 class="font-heading font-bold text-lg text-scout-blue">Crisp White</h3>
+              <p class="text-xs text-scout-dark/70 mt-0.5">9" Grower Pot • $15</p>
+            </div>
+            <div class="flex items-center justify-center bg-white border border-scout-border rounded-xl p-1 shadow-inner">
+              <button type="button" onclick="adjustQty('white', -1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">-</button>
+              <input type="number" id="qty-white" value="0" min="0" oninput="calcTotal()" class="w-12 text-center font-bold text-scout-blue bg-transparent text-base focus:outline-none" />
+              <button type="button" onclick="adjustQty('white', 1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Red -->
+        <div class="bg-scout-cream rounded-2xl overflow-hidden border border-scout-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <img src="mum-red.jpg" alt="Deep Red Potted Mum" class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 bg-scout-dark/85 py-1.5 px-2 text-center">
+              <span class="text-[9px] uppercase tracking-wider text-scout-gold font-bold block">Visual Preview Only</span>
+              <span class="text-[8px] text-white/90 block leading-tight">Actual 9" nursery plant may vary</span>
+            </div>
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-between">
+            <div class="mb-3">
+              <h3 class="font-heading font-bold text-lg text-scout-blue">Deep Red</h3>
+              <p class="text-xs text-scout-dark/70 mt-0.5">9" Grower Pot • $15</p>
+            </div>
+            <div class="flex items-center justify-center bg-white border border-scout-border rounded-xl p-1 shadow-inner">
+              <button type="button" onclick="adjustQty('red', -1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">-</button>
+              <input type="number" id="qty-red" value="0" min="0" oninput="calcTotal()" class="w-12 text-center font-bold text-scout-blue bg-transparent text-base focus:outline-none" />
+              <button type="button" onclick="adjustQty('red', 1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Yellow -->
+        <div class="bg-scout-cream rounded-2xl overflow-hidden border border-scout-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <img src="mum-yellow.jpg" alt="Golden Yellow Potted Mum" class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 bg-scout-dark/85 py-1.5 px-2 text-center">
+              <span class="text-[9px] uppercase tracking-wider text-scout-gold font-bold block">Visual Preview Only</span>
+              <span class="text-[8px] text-white/90 block leading-tight">Actual 9" nursery plant may vary</span>
+            </div>
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-between">
+            <div class="mb-3">
+              <h3 class="font-heading font-bold text-lg text-scout-blue">Golden Yellow</h3>
+              <p class="text-xs text-scout-dark/70 mt-0.5">9" Grower Pot • $15</p>
+            </div>
+            <div class="flex items-center justify-center bg-white border border-scout-border rounded-xl p-1 shadow-inner">
+              <button type="button" onclick="adjustQty('yellow', -1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">-</button>
+              <input type="number" id="qty-yellow" value="0" min="0" oninput="calcTotal()" class="w-12 text-center font-bold text-scout-blue bg-transparent text-base focus:outline-none" />
+              <button type="button" onclick="adjustQty('yellow', 1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orange -->
+        <div class="bg-scout-cream rounded-2xl overflow-hidden border border-scout-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <img src="mum-orange.jpg" alt="Harvest Orange Potted Mum" class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 bg-scout-dark/85 py-1.5 px-2 text-center">
+              <span class="text-[9px] uppercase tracking-wider text-scout-gold font-bold block">Visual Preview Only</span>
+              <span class="text-[8px] text-white/90 block leading-tight">Actual 9" nursery plant may vary</span>
+            </div>
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-between">
+            <div class="mb-3">
+              <h3 class="font-heading font-bold text-lg text-scout-blue">Harvest Orange</h3>
+              <p class="text-xs text-scout-dark/70 mt-0.5">9" Grower Pot • $15</p>
+            </div>
+            <div class="flex items-center justify-center bg-white border border-scout-border rounded-xl p-1 shadow-inner">
+              <button type="button" onclick="adjustQty('orange', -1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">-</button>
+              <input type="number" id="qty-orange" value="0" min="0" oninput="calcTotal()" class="w-12 text-center font-bold text-scout-blue bg-transparent text-base focus:outline-none" />
+              <button type="button" onclick="adjustQty('orange', 1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Purple -->
+        <div class="bg-scout-cream rounded-2xl overflow-hidden border border-scout-border flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+          <div class="relative aspect-square overflow-hidden bg-slate-100">
+            <img src="mum-purple.jpg" alt="Royal Purple Potted Mum" class="w-full h-full object-cover" />
+            <div class="absolute inset-x-0 bottom-0 bg-scout-dark/85 py-1.5 px-2 text-center">
+              <span class="text-[9px] uppercase tracking-wider text-scout-gold font-bold block">Visual Preview Only</span>
+              <span class="text-[8px] text-white/90 block leading-tight">Actual 9" nursery plant may vary</span>
+            </div>
+          </div>
+          <div class="p-4 text-center flex-1 flex flex-col justify-between">
+            <div class="mb-3">
+              <h3 class="font-heading font-bold text-lg text-scout-blue">Royal Purple</h3>
+              <p class="text-xs text-scout-dark/70 mt-0.5">9" Grower Pot • $15</p>
+            </div>
+            <div class="flex items-center justify-center bg-white border border-scout-border rounded-xl p-1 shadow-inner">
+              <button type="button" onclick="adjustQty('purple', -1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">-</button>
+              <input type="number" id="qty-purple" value="0" min="0" oninput="calcTotal()" class="w-12 text-center font-bold text-scout-blue bg-transparent text-base focus:outline-none" />
+              <button type="button" onclick="adjustQty('purple', 1)" class="w-9 h-9 rounded-lg bg-scout-cream hover:bg-scout-gold text-scout-blue font-bold text-lg transition-colors flex items-center justify-center">+</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Action Bar -->
+      <div class="mt-12 p-6 bg-scout-blue text-white rounded-2xl max-w-2xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 shadow-xl border border-scout-gold/30">
+        <div>
+          <div class="text-xs text-white/80 uppercase tracking-wider">Your Order Total</div>
+          <div class="text-2xl font-heading font-extrabold text-scout-gold">
+            <span id="card-total-plants">0</span> Mums • <span id="card-total-cost">$0.00</span>
+          </div>
+        </div>
+        <a href="#order-form" class="w-full sm:w-auto text-center px-6 py-3 bg-scout-gold hover:bg-scout-goldHover text-scout-dark font-heading font-extrabold rounded-xl shadow transition-all">
+          Proceed to Checkout ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKOUT -->
+  <section id="order-form" class="py-16 bg-scout-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="bg-[#001D40] border border-scout-gold/30 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        
+        <div class="text-center max-w-xl mx-auto mb-8 space-y-2">
+          <span class="text-scout-gold font-bold text-xs uppercase tracking-widest">Farmington & Unionville Addresses Only</span>
+          <h2 class="font-heading text-3xl font-extrabold text-white">2. Complete Your Order</h2>
+          <p class="text-white/80 text-xs">
+            Review your order summary below, enter your delivery address, and submit to generate your Venmo memo.
+          </p>
+        </div>
+
+        <!-- SUCCESS SCREEN -->
+        <div id="order-success-screen" class="hidden text-center py-10 space-y-6">
+          <div class="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center mx-auto text-3xl font-bold">
+            ✓
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-heading text-3xl font-extrabold text-white">Order Received!</h3>
+            <p class="text-sm text-white/80">Your confirmation receipt has been emailed to you.</p>
+          </div>
+
+          <div class="bg-white/10 border border-white/20 rounded-2xl p-6 max-w-md mx-auto text-left space-y-3">
+            <div class="text-xs uppercase text-scout-gold font-bold tracking-wider">Step 2: Submit Venmo Payment</div>
+            <div class="text-sm"><strong>Total Due:</strong> $<span id="success-total">0</span>.00</div>
+            <div class="text-sm"><strong>Venmo Account:</strong> <a href="https://venmo.com/Pack68FarmCT" target="_blank" class="text-scout-gold underline font-bold">@Pack68FarmCT</a></div>
+            <div class="text-sm">
+              <strong>Required Venmo Memo:</strong>
+              <div class="mt-1 p-2.5 bg-scout-dark border border-scout-gold rounded font-mono text-scout-gold font-bold text-base flex justify-between items-center">
+                <span id="success-memo">P68-1001 DOE</span>
+                <button type="button" onclick="copyMemo()" class="text-xs uppercase bg-white/20 hover:bg-white/30 text-white px-2 py-1 rounded">Copy</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-xs text-white/60 max-w-md mx-auto">
+            <em>Important:</em> Orders without confirmed Venmo payment will not be submitted to the nursery.
+          </p>
+        </div>
+
+        <!-- ORDER FORM -->
+        <form id="mum-form" onsubmit="submitMumOrder(event)" class="space-y-8">
+          
+          <!-- Order Summary Breakdown -->
+          <div class="bg-white/5 border border-white/10 p-4 sm:p-6 rounded-2xl">
+            <div class="flex justify-between items-center mb-3">
+              <h4 class="text-xs font-bold uppercase tracking-wider text-scout-gold">Order Summary</h4>
+              <a href="#products" class="text-xs text-white/70 underline hover:text-white">Change Quantities ↑</a>
+            </div>
+            
+            <div id="summary-empty-msg" class="text-sm text-white/60 italic py-2">
+              No mums selected yet. Use the [+] buttons on the color cards above to select colors.
+            </div>
+
+            <div id="summary-items-list" class="space-y-1.5 text-sm hidden border-b border-white/10 pb-3 mb-3"></div>
+
+            <div class="flex justify-between items-center font-bold text-base pt-1">
+              <div>Total Due:</div>
+              <div id="summary-cost-display" class="text-scout-gold text-xl">$0.00</div>
+            </div>
+          </div>
+
+          <!-- Supporter Information -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-scout-gold mb-3">Supporter Information</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Full Name *</label>
+                <input type="text" id="cust-name" required placeholder="Jane Doe" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-scout-gold text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Email (for receipt & updates) *</label>
+                <input type="email" id="cust-email" required placeholder="you@example.com" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-scout-gold text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Phone Number *</label>
+                <input type="tel" id="cust-phone" required placeholder="(860) 555-0199" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-scout-gold text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Town / Zip Code *</label>
+                <select id="cust-zip" required class="w-full bg-scout-blue border border-white/20 rounded-xl px-4 py-2.5 text-white focus:outline-none focus:border-scout-gold text-sm">
+                  <option value="06032">Farmington, CT (06032)</option>
+                  <option value="06085">Unionville, CT (06085)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delivery Address -->
+          <div>
+            <h4 class="text-xs font-bold uppercase tracking-wider text-scout-gold mb-3">Delivery Address</h4>
+            <div class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Street Address *</label>
+                <input type="text" id="cust-address" required placeholder="123 Main St" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-scout-gold text-sm" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-white/90 mb-1">Drop-off Notes (Optional)</label>
+                <input type="text" id="cust-notes" placeholder="e.g. Leave on front porch by the door" class="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-2.5 text-white placeholder-white/40 focus:outline-none focus:border-scout-gold text-sm" />
+              </div>
+            </div>
+          </div>
+
+          <div id="form-error" class="hidden p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-center text-xs font-bold text-red-200"></div>
+
+          <button type="submit" id="submit-btn" class="w-full py-4 bg-scout-gold hover:bg-scout-goldHover text-scout-dark font-heading font-extrabold text-base rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+            Submit Order & Generate Venmo Receipt →
+          </button>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-scout-dark text-white/70 py-10 border-t border-white/10 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="flex items-center gap-3">
+        <img src="pack68-logo.png" alt="Pack 68 Logo" class="h-10 w-auto drop-shadow" />
+        <div>
+          <div class="font-heading font-bold text-white text-base">Cub Scout Pack 68 Fundraiser</div>
+          <div class="text-xs">Partnered with Mapletree Nursery • Farmington, CT</div>
+        </div>
+      </div>
+      <div class="text-xs text-center md:text-right">
+        Farmington & Unionville Porch Deliveries • October 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function adjustQty(color, delta) {
+      const input = document.getElementById('qty-' + color);
+      let currentVal = parseInt(input.value) || 0;
+      let newVal = Math.max(0, currentVal + delta);
+      input.value = newVal;
+      calcTotal();
+    }
+
+    function calcTotal() {
+      const white = parseInt(document.getElementById('qty-white').value) || 0;
+      const red = parseInt(document.getElementById('qty-red').value) || 0;
+      const yellow = parseInt(document.getElementById('qty-yellow').value) || 0;
+      const orange = parseInt(document.getElementById('qty-orange').value) || 0;
+      const purple = parseInt(document.getElementById('qty-purple').value) || 0;
+
+      const totalPlants = white + red + yellow + orange + purple;
+      const totalDue = totalPlants * 15;
+
+      document.getElementById('card-total-plants').innerText = totalPlants;
+      document.getElementById('card-total-cost').innerText = '$' + totalDue.toFixed(2);
+      
+      const navBadge = document.getElementById('nav-badge');
+      if (totalPlants > 0) {
+        navBadge.innerText = totalPlants;
+        navBadge.classList.remove('hidden');
+      } else {
+        navBadge.classList.add('hidden');
+      }
+
+      const emptyMsg = document.getElementById('summary-empty-msg');
+      const itemsList = document.getElementById('summary-items-list');
+      const costDisplay = document.getElementById('summary-cost-display');
+
+      costDisplay.innerText = '$' + totalDue.toFixed(2);
+
+      if (totalPlants === 0) {
+        emptyMsg.classList.remove('hidden');
+        itemsList.classList.add('hidden');
+        itemsList.innerHTML = '';
+      } else {
+        emptyMsg.classList.add('hidden');
+        itemsList.classList.remove('hidden');
+        
+        let html = '';
+        if (white > 0) html += `<div class="flex justify-between"><span>Crisp White (×${white})</span><span>$${white * 15}.00</span></div>`;
+        if (red > 0) html += `<div class="flex justify-between"><span>Deep Red (×${red})</span><span>$${red * 15}.00</span></div>`;
+        if (yellow > 0) html += `<div class="flex justify-between"><span>Golden Yellow (×${yellow})</span><span>$${yellow * 15}.00</span></div>`;
+        if (orange > 0) html += `<div class="flex justify-between"><span>Harvest Orange (×${orange})</span><span>$${orange * 15}.00</span></div>`;
+        if (purple > 0) html += `<div class="flex justify-between"><span>Royal Purple (×${purple})</span><span>$${purple * 15}.00</span></div>`;
+        
+        itemsList.innerHTML = html;
+      }
+
+      return { white, red, yellow, orange, purple, totalPlants, totalDue };
+    }
+
+    async function submitMumOrder(event) {
+      event.preventDefault();
+      const errBox = document.getElementById('form-error');
+      errBox.classList.add('hidden');
+
+      const { white, red, yellow, orange, purple, totalPlants, totalDue } = calcTotal();
+
+      if (totalPlants <= 0) {
+        errBox.innerText = "Please select at least 1 mum to order using the [+] buttons on the color cards above.";
+        errBox.classList.remove('hidden');
+        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      const fullName = document.getElementById('cust-name').value.trim();
+      const email = document.getElementById('cust-email').value.trim();
+      const phone = document.getElementById('cust-phone').value.trim();
+      const zip = document.getElementById('cust-zip').value;
+      const address = document.getElementById('cust-address').value.trim();
+      const deliveryNotes = document.getElementById('cust-notes').value.trim();
+
+      const nameParts = fullName.split(' ');
+      const lastName = (nameParts.length > 1 ? nameParts[nameParts.length - 1] : fullName).toUpperCase();
+
+      // Sequential unique order ID generation for Pack 68
+      let currentOrderCount = parseInt(localStorage.getItem('pack68_mum_seq') || '1000');
+      currentOrderCount += 1;
+      localStorage.setItem('pack68_mum_seq', currentOrderCount);
+
+      const orderId = "P68-" + currentOrderCount;
+      const fullMemo = orderId + " " + lastName;
+
+      const payload = {
+        orderId,
+        fullName,
+        lastName,
+        email,
+        phone,
+        zip,
+        address,
+        deliveryNotes,
+        white,
+        red,
+        yellow,
+        orange,
+        purple,
+        totalPlants,
+        totalDue
+      };
+
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.innerText = "Processing Order...";
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyN6MolsXw6qAVEO-EFd8dbHESguKrM3-CI95VngS6QXtmcaHXsAscbL3468ylah1-5_w/exec";
+
+      try {
+        await fetch(scriptURL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        });
+
+        document.getElementById('mum-form').classList.add('hidden');
+        document.getElementById('success-total').innerText = totalDue;
+        document.getElementById('success-memo').innerText = fullMemo;
+        document.getElementById('order-success-screen').classList.remove('hidden');
+
+      } catch (err) {
+        errBox.innerText = "There was an error submitting your order. Please contact your Pack 68 coordinator.";
+        errBox.classList.remove('hidden');
+        btn.disabled = false;
+        btn.innerText = "Submit Order & Generate Venmo Receipt →";
+      }
+    }
+
+    function copyMemo() {
+      const text = document.getElementById('success-memo').innerText;
+      navigator.clipboard.writeText(text);
+      alert("Venmo memo copied: " + text);
+    }
+  </script>
+
+</body>
+</html>
